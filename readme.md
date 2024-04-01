@@ -7,18 +7,37 @@ Se va a crear la carpeta env en la carpeta de trabajo que estes.
 Recomendacion: No tocar nada de esa carpeta.
 
 Para activarlo, (estando en la ruta de tu carpeta) vamos a escribir:
-> .\env\Scripts\activate
+> .\venv\Scripts\activate
 
-Una ves que damos enter en la terminar va a aparecer algo asi:
+## `Nota:` si nos sale un error como:
++ No se puede cargar el archivo C:\Users\Usuario\Desktop\testing\venv\Scripts\activate.ps1 
+porque la ejecución de scripts está deshabilitada en este sistema. 
 
-Antes de darle click:
+El error que estás viendo se debe a que la política de ejecución de PowerShell en tu sistema está configurada para no permitir la ejecución de scripts, que es una medida de seguridad.
+
+Para solucionar este problema, puedes cambiar temporalmente la política de ejecución para permitir la ejecución de scripts. Aquí te muestro cómo hacerlo:
+
+Abre PowerShell como administrador.
+Ejecuta el siguiente comando:
+
+> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+
+
+
+Por razones de seguridad, es posible que desees volver a establecer la política de ejecución a su valor original después de activar tu entorno virtual. Puedes hacerlo con el siguiente comando:
+> Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
+
+
+## Una ves que damos enter en la terminar va a aparecer algo asi:
+
+Antes de darle `click`:
 > PS C:\Users\usuario\Desktop\testing
 
-Luego de darle click:
+Luego de darle `click`:
 
 > (env) PS C:\Users\usuario\Desktop\testing
 
-Dentro de este entorno voy a tener paquetes ya preinstalados, podemos verlo con el comando:
+Dentro de este entorno vas a tener paquetes ya preinstalados, podemos verlo con el comando:
 
 > pip list
 
