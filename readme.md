@@ -36,3 +36,7 @@ Una vez que tenemos el requirements.txt, si alguna vez necesitamos que el entorn
 > pip install -r .\requirements.txt
 
 Teniendo en cuenta que estamos escribiendo bien la ruta del archivo.
+
+Para salir del entorno:
+
+> deactivate
