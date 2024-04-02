@@ -3,8 +3,13 @@
 En la terminal escribimos:
 > virtualenv -p python3 venv
 
-Se va a crear la carpeta env en la carpeta de trabajo que estes.
-Recomendacion: No tocar nada de esa carpeta.
+Si nos llega a aparecer un error es por que no tenemos instalado el paquete de virtualenv en nuestra computadora local. Para instalarlo ejecutamos en la terminal:
+
+> pip install virtualenv
+
+Luego ejecutamos el comando anterior y se va a crear la carpeta venv en la carpeta de trabajo que tengas abierta en tu IDE de preferencia.
+
+**_Recomendacion_**: No tocar nada de esa carpeta.
 
 Para activarlo, (estando en la ruta de tu carpeta) vamos a escribir:
 > .\venv\Scripts\activate
