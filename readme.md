@@ -9,9 +9,8 @@ Recomendacion: No tocar nada de esa carpeta.
 Para activarlo, (estando en la ruta de tu carpeta) vamos a escribir:
 > .\venv\Scripts\activate
 
-## `Nota:` si nos sale un error como:
-+ No se puede cargar el archivo C:\Users\Usuario\Desktop\testing\venv\Scripts\activate.ps1 
-porque la ejecución de scripts está deshabilitada en este sistema. 
+## `Nota` si nos sale un error como:
++ No se puede cargar el archivo C:\Users\Usuario\Desktop\testing\venv\Scripts\activate.ps1 porque la ejecución de scripts está deshabilitada en este sistema...
 
 El error que estás viendo se debe a que la política de ejecución de PowerShell en tu sistema está configurada para no permitir la ejecución de scripts, que es una medida de seguridad.
 
@@ -23,12 +22,11 @@ Ejecuta el siguiente comando:
 > Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 
 
-
 Por razones de seguridad, es posible que desees volver a establecer la política de ejecución a su valor original después de activar tu entorno virtual. Puedes hacerlo con el siguiente comando:
 > Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
 
 
-## Una ves que damos enter en la terminar va a aparecer algo asi:
+## Una ves que damos enter en la terminal para activar el entorno va a aparecer algo asi:
 
 Antes de darle `click`:
 > PS C:\Users\usuario\Desktop\testing
@@ -54,8 +52,8 @@ Una vez que tenemos el requirements.txt, si alguna vez necesitamos que el entorn
 
 > pip install -r .\requirements.txt
 
-Teniendo en cuenta que estamos escribiendo bien la ruta del archivo.
+Teniendo en cuenta que estamos escribiendo bien ***la ruta del archivo***.
 
-Para salir del entorno:
+Para salir del entorno solo ejecutamos el siguiente codigo en la terminal:
 
 > deactivate
