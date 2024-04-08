@@ -1,69 +1,81 @@
-## Para crear un entorno virtual
+## Setting up a Virtual Environment
 
-En la terminal escribimos:
+In your terminal, type:
 
 ```bash
 virtualenv -p python3 venv
 ```
 
-Si nos llega a aparecer un error es por que no tenemos instalado el paquete de virtualenv en nuestra computadora local. Para instalarlo ejecutamos en la terminal:
+If you encounter an error, it might be because the virtualenv package is not installed on your local machine. To install it, run the following command in the terminal:
 
-``` bash
+```bash
 pip install virtualenv
 ```
 
-Luego ejecutamos el comando anterior y se va a crear la carpeta venv en la carpeta de trabajo que tengas abierta en tu IDE de preferencia.
+Then execute the previous command again, and a folder named `venv` will be created in the working directory of your preferred IDE.
 
-**_Recomendacion_**: No tocar nada de esa carpeta.
+**_Recommendation_**: Do not modify anything within this folder.
 
-Para activarlo, (estando en la ruta de tu carpeta) vamos a escribir:
-> .\venv\Scripts\activate
+To activate the virtual environment (while in the directory of your project), type:
+```bash
+.\venv\Scripts\activate
+```
 
-## `Nota` si nos sale un error como:
-+ No se puede cargar el archivo C:\Users\Usuario\Desktop\testing\venv\Scripts\activate.ps1 porque la ejecución de scripts está deshabilitada en este sistema...
+## `Note` if you encounter an error like:
+> Cannot load file C:\Users\User\Desktop\testing\venv\Scripts\activate.ps1 because running scripts is disabled on this system...
 
-El error que estás viendo se debe a que la política de ejecución de PowerShell en tu sistema está configurada para no permitir la ejecución de scripts, que es una medida de seguridad.
+The error you're seeing is due to the PowerShell execution policy on your system being configured to not allow script execution, which is a security measure.
 
-Para solucionar este problema, puedes cambiar temporalmente la política de ejecución para permitir la ejecución de scripts. Aquí te muestro cómo hacerlo:
+To solve this problem, you can temporarily change the execution policy to allow script execution. Here's how you can do it:
 
-Abre PowerShell como administrador.
-Ejecuta el siguiente comando:
+Open PowerShell as an administrator.
+Run the following command:
 
-> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```bash
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```
 
+For security reasons, you may want to revert the execution policy back to its original value after activating your virtual environment. You can do so with the following command:
+```bash
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
+```
 
-Por razones de seguridad, es posible que desees volver a establecer la política de ejecución a su valor original después de activar tu entorno virtual. Puedes hacerlo con el siguiente comando:
-> Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
+## Once you hit `enter` in the terminal to activate the environment, you'll see something like this:
 
+Before hitting `enter`:
+> PS C:\Users\user\Desktop\testing
 
-## Una ves que damos enter en la terminal para activar el entorno va a aparecer algo asi:
+After hitting `enter`:
 
-Antes de darle `click`:
-> PS C:\Users\usuario\Desktop\testing
+> (venv) PS C:\Users\user\Desktop\testing
 
-Luego de darle `click`:
+Within this environment, you'll have pre-installed packages. You can view them with the command:
 
-> (env) PS C:\Users\usuario\Desktop\testing
+```bash
+pip list
+```
+and if you need to install any additional packages, you can do so with pip install (let's see how to install pandas):
+```bash
+pip install pandas
+```
+## Let's get to the important part
 
-Dentro de este entorno vas a tener paquetes ya preinstalados, podemos verlo con el comando:
+Exporting the packages to a `.txt` file. To do this, type the following command in the console:
 
-> pip list
+```bash
+pip freeze > requirements.txt 
+```
+Once you have the requirements.txt, if you ever need the environment to reinstall the packages because you're using another computer, you should execute the following command within the `venv`:
 
-y si queremos instalar alguno que vayamos a utilizar lo hacemos pip install (veamos como instalar pandas): 
-> pip install pandas
+```bash
+pip install -r .\requirements.txt
+```
+Ensure that you correctly specify ***the file path***.
 
-## Vayamos a lo importante
+To exit the environment, simply run the following code in the terminal:
 
-Exportar los paquetes a un `.txt`. Para hacerlo escribimos en la consola el siguiente comando:
+```bash
+deactivate
+```
 
-> pip freeze > requirements.txt 
-
-Una vez que tenemos el requirements.txt, si alguna vez necesitamos que el entorno vuelva a instalar los paquetes por que usamos otra computadora, debemos ejecutar el siguiente comando dentro del `venv`
-
-> pip install -r .\requirements.txt
-
-Teniendo en cuenta que estamos escribiendo bien ***la ruta del archivo***.
-
-Para salir del entorno solo ejecutamos el siguiente codigo en la terminal:
-
-> deactivate
+## Let's see an example with the scripts we have in the `examples` folder
