@@ -1,5 +1,8 @@
-## Setting up a Virtual Environment
+<h1 align="center"> Tutorial on how to set a virtual environment </h1>
 
+## For Spanish Version, [Click here](./ES%20-%20version)
+
+###  First thing first, setting it up 
 In your terminal, type:
 
 ```bash
@@ -77,5 +80,3 @@ To exit the environment, simply run the following code in the terminal:
 ```bash
 deactivate
 ```
-
-## Let's see an example with the scripts we have in the `examples` folder
