@@ -43,26 +43,26 @@ Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
 ```
 
 
-## Una ves que damos enter en la terminal para activar el entorno va a aparecer algo asi:
+## Una ves que damos enter en la terminal (para activar el entorno) va a aparecer algo asi:
 
-Antes de darle `click`:
+Antes de darle `enter`:
 > PS C:\Users\usuario\Desktop\testing
 
-Luego de darle `click`:
+Luego de darle `enter`:
 
 > (env) PS C:\Users\usuario\Desktop\testing
 
-Dentro de este entorno vas a tener paquetes ya preinstalados, podemos verlo con el comando:
+**Dentro** de este entorno vas a tener paquetes ya preinstalados, podemos verlo con el comando:
 
 ```bash
 pip list
 ```
 
-y si queremos instalar alguno que vayamos a utilizar lo hacemos pip install (veamos como instalar pandas): 
+y si queremos instalar alguno que vayamos a utilizar lo hacemos utilizando el comando pip install (veamos como instalar pandas): 
 ```bash
 pip install pandas
 ```
-## Vayamos a lo importante
+## Vayamos a lo **importante**
 
 Exportar los paquetes a un `.txt`. Para hacerlo escribimos en la consola el siguiente comando:
 
@@ -75,7 +75,7 @@ Una vez que tenemos el requirements.txt, si alguna vez necesitamos que el entorn
 ```bash
 pip install -r .\requirements.txt
 ```
-Teniendo en cuenta que estamos escribiendo bien ***la ruta del archivo***.
+Teniendo en cuenta que estamos escribiendo bien ***la ruta del archivo del requirements.txt***.
 
 Para salir del entorno solo ejecutamos el siguiente codigo en la terminal:
 
