@@ -2,26 +2,26 @@
 
 ### Para version en ingles, [click aca](../)
 
-### Para crear un entorno virtual
+### Configuración del Entorno Virtual
 
-En la terminal escribimos:
+Para crear un entorno virtual, primero asegurate de estar en el directorio donde querés que se cree el entorno. Luego, ejecutá el siguiente comando en la terminal:
 
 ```bash
-virtualenv -p python3 venv
+python -m venv ejemplo-venv
 ```
 
-Si nos llega a aparecer un error es por que no tenemos instalado el paquete de virtualenv en nuestra computadora local. Para instalarlo ejecutamos en la terminal:
+Este comando generará una carpeta llamada `ejemplo-venv` en el directorio de trabajo actual y utilizará la versión actual de Python que tengas instalada. Podés verificar qué versión de Python estás usando con el siguiente comando:
 
-``` bash
-pip install virtualenv
+```bash
+python --version
 ```
 
-Luego ejecutamos el comando anterior y se va a crear la carpeta venv en la carpeta de trabajo que tengas abierta en tu IDE de preferencia.
-
-**_Recomendacion_**: No tocar nada de esa carpeta.
+> [!TIP]
+> 1. Una ruta común para el directorio del entorno virtual es `venv` (abreviatura de **V**irtual **ENV**ironment).
+> 2. No modifiques nada dentro de esta carpeta.
 
 Para activarlo, (estando en la ruta de tu carpeta) vamos a escribir:
-> .\venv\Scripts\activate
+> .\ejemplo-venv\Scripts\activate
 
 ## `Nota` si nos sale un error como:
 > No se puede cargar el archivo C:\Users\Usuario\Desktop\testing\venv\Scripts\activate.ps1 porque la ejecución de scripts está deshabilitada en este sistema...
